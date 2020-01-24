@@ -7,7 +7,7 @@ package model.data_structures;
  * @author Fernando De la Rosa
  *
  */
-public class ArregloDinamico implements IArregloDinamico {
+public class ArregloDinamico<Integer extends Comparable<Integer>> implements IArregloDinamico<Integer> {
 		/**
 		 * Capacidad maxima del arreglo
 		 */
