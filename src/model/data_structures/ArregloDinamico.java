@@ -7,7 +7,7 @@ package model.data_structures;
  * @author Fernando De la Rosa
  *
  */
-public class ArregloDinamico<Integer extends Comparable<Integer>> implements IArregloDinamico<Integer> {
+public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamico<T> {
 		/**
 		 * Capacidad maxima del arreglo
 		 */
@@ -32,7 +32,7 @@ public class ArregloDinamico<Integer extends Comparable<Integer>> implements IAr
                tamanoAct = 0;
         }
         
-		public void agregar( String dato )
+		public void agregar( T dato )
         {
                if ( tamanoAct == tamanoMax )
                {  // caso de arreglo lleno (aumentar tamaNo)
@@ -45,7 +45,7 @@ public class ArregloDinamico<Integer extends Comparable<Integer>> implements IAr
                     } 
             	    System.out.println("Arreglo lleno: " + tamanoAct + " - Arreglo duplicado: " + tamanoMax);
                }	
-               elementos[tamanoAct] = dato;
+               elementos[tamanoAct] = (String) dato;
                tamanoAct++;
        }
 
@@ -62,13 +62,13 @@ public class ArregloDinamico<Integer extends Comparable<Integer>> implements IAr
 			return null;
 		}
 
-		public String buscar(String dato) {
+		public String buscar(T dato) {
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
 			return null;
 		}
 
-		public String eliminar(String dato) {
+		public String eliminar(T dato) {
 			// TODO implementar
 			// Recomendacion: Usar el criterio de comparacion natural (metodo compareTo()) definido en Strings.
 			return null;
